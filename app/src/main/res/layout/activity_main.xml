@@ -64,4 +64,19 @@
         android:textSize="18sp"
         app:cornerRadius="30dp" />
 
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="KELUAR"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textSize="16dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:background="@drawable/reds_border"
+
+        />
+
 </LinearLayout>

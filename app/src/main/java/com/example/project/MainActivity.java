@@ -1,5 +1,6 @@
 package com.example.project;
 
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    Button lihatdata,inputdata,informasi;
+    Button lihatdata,inputdata,informasi,keluar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         lihatdata = findViewById(R.id.lihatdata);
         inputdata = findViewById(R.id.inputdata);
         informasi = findViewById(R.id.informasi);
+        keluar = findViewById(R.id.btn_logout);
 
         lihatdata.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,InfromasiActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        keluar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
